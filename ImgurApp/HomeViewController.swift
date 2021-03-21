@@ -23,11 +23,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.dataSource = self
     }
         
-    func parseData(){
-        let url = ""
-    }
-    
-
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("You tapped me!")
     }
