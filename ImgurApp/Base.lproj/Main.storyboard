@@ -81,7 +81,7 @@
         <!--Upload-->
         <scene sceneID="q7k-rh-Pag">
             <objects>
-                <viewController id="da8-VQ-bvx" customClass="ViewController" customModule="ImgurApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="da8-VQ-bvx" customClass="UploadViewController" customModule="ImgurApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2BU-0f-SGc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -112,7 +112,7 @@
         <!--Settings-->
         <scene sceneID="UVi-kP-ilz">
             <objects>
-                <viewController id="q91-CW-MdY" sceneMemberID="viewController">
+                <viewController id="q91-CW-MdY" customClass="SettingsViewController" customModule="ImgurApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qHZ-T1-40t">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
