@@ -99,14 +99,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S3e-RV-Gbq">
+                                <rect key="frame" x="0.0" y="173.5" width="414" height="544"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="QJF-KU-HXH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="QJF-KU-HXH" firstAttribute="bottom" secondItem="S3e-RV-Gbq" secondAttribute="bottom" constant="95.5" id="4kW-fg-DRe"/>
                             <constraint firstItem="QJF-KU-HXH" firstAttribute="bottom" secondItem="5OZ-0M-pmW" secondAttribute="bottom" constant="30" id="7ys-Wj-xy4"/>
                             <constraint firstItem="lmg-O9-nrC" firstAttribute="leading" secondItem="QJF-KU-HXH" secondAttribute="leading" id="IqX-yw-Fy9"/>
+                            <constraint firstItem="S3e-RV-Gbq" firstAttribute="top" secondItem="QJF-KU-HXH" secondAttribute="top" constant="85.5" id="W7i-3Y-a4h"/>
                             <constraint firstItem="5OZ-0M-pmW" firstAttribute="top" relation="greaterThanOrEqual" secondItem="QJF-KU-HXH" secondAttribute="top" id="dsp-1D-46N"/>
+                            <constraint firstItem="S3e-RV-Gbq" firstAttribute="leading" secondItem="QJF-KU-HXH" secondAttribute="leading" id="fjN-5x-RQj"/>
                             <constraint firstItem="QJF-KU-HXH" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="5OZ-0M-pmW" secondAttribute="trailing" id="jih-yx-vSv"/>
+                            <constraint firstItem="QJF-KU-HXH" firstAttribute="trailing" secondItem="S3e-RV-Gbq" secondAttribute="trailing" id="m19-b5-b6l"/>
                             <constraint firstItem="QJF-KU-HXH" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="lmg-O9-nrC" secondAttribute="bottom" id="o2l-lU-khx"/>
                             <constraint firstItem="lmg-O9-nrC" firstAttribute="trailing" secondItem="QJF-KU-HXH" secondAttribute="trailing" id="qNd-G1-ug7"/>
                             <constraint firstItem="lmg-O9-nrC" firstAttribute="top" secondItem="QJF-KU-HXH" secondAttribute="top" constant="30" id="t38-k1-tLd"/>
@@ -117,7 +124,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E6V-RR-KWE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1430" y="159"/>
+            <point key="canvasLocation" x="1428.985507246377" y="158.70535714285714"/>
         </scene>
         <!--Settings-->
         <scene sceneID="UVi-kP-ilz">
