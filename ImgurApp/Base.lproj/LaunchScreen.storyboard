@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ImgurApp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OJU-XY-2YX">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ImgurApp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OJU-XY-2YX">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                 <color key="textColor" name="AccentColor"/>
@@ -28,10 +28,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OJU-XY-2YX" secondAttribute="trailing" id="FFj-UQ-DsL"/>
-                            <constraint firstItem="OJU-XY-2YX" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="FrI-rf-UL2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OJU-XY-2YX" secondAttribute="bottom" id="GaQ-Ms-6X1"/>
                             <constraint firstItem="OJU-XY-2YX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ldt-2K-2st"/>
-                            <constraint firstItem="OJU-XY-2YX" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="fx6-rI-gDF"/>
                             <constraint firstItem="OJU-XY-2YX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="zEV-WW-1TE"/>
                         </constraints>
                     </view>

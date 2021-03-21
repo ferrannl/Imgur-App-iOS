@@ -97,8 +97,10 @@
                         <viewLayoutGuide key="safeArea" id="QJF-KU-HXH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="QJF-KU-HXH" firstAttribute="bottom" secondItem="5OZ-0M-pmW" secondAttribute="bottom" constant="20" id="RvO-Vt-PWR"/>
-                            <constraint firstItem="5OZ-0M-pmW" firstAttribute="leading" secondItem="QJF-KU-HXH" secondAttribute="leading" constant="34" id="VVq-rT-u00"/>
+                            <constraint firstItem="QJF-KU-HXH" firstAttribute="bottom" secondItem="5OZ-0M-pmW" secondAttribute="bottom" constant="20" id="7ys-Wj-xy4"/>
+                            <constraint firstItem="5OZ-0M-pmW" firstAttribute="top" secondItem="QJF-KU-HXH" secondAttribute="top" constant="675" id="dsp-1D-46N"/>
+                            <constraint firstItem="QJF-KU-HXH" firstAttribute="trailing" secondItem="5OZ-0M-pmW" secondAttribute="trailing" constant="331" id="jih-yx-vSv"/>
+                            <constraint firstItem="5OZ-0M-pmW" firstAttribute="leading" secondItem="QJF-KU-HXH" secondAttribute="leading" constant="34" id="xox-2n-qW1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Upload" id="ZWv-Qo-pnT"/>
@@ -127,7 +129,7 @@
         <scene sceneID="eCA-U7-wh5">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T8e-Ki-y5b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController id="0Uj-I4-QgN" customClass="ViewController" customModule="ImgurApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0Uj-I4-QgN" customClass="HomeViewController" customModule="ImgurApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6IS-Xx-6RC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
