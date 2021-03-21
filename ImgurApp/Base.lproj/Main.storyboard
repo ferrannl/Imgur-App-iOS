@@ -37,7 +37,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="TYF-Di-8XW" kind="relationship" relationship="rootViewController" id="q0k-bH-rDC"/>
+                        <segue destination="0Uj-I4-QgN" kind="relationship" relationship="rootViewController" id="g8s-Ql-Fim"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lZ6-ST-AxM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -77,32 +77,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kjc-9B-Net" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1287" y="-514"/>
-        </scene>
-        <!--Home-->
-        <scene sceneID="MYs-nh-jq8">
-            <objects>
-                <viewController id="TYF-Di-8XW" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="7Yx-gu-In6">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mbi-qu-muK">
-                                <rect key="frame" x="34" y="763" width="40" height="30"/>
-                                <state key="normal" title="Share"/>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="fV6-69-LQK"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="Mbi-qu-muK" firstAttribute="leading" secondItem="fV6-69-LQK" secondAttribute="leading" constant="34" id="Wgb-f1-6Vn"/>
-                            <constraint firstItem="fV6-69-LQK" firstAttribute="bottom" secondItem="Mbi-qu-muK" secondAttribute="bottom" constant="20" id="t7z-g0-EgS"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Home" id="q66-tT-aPU"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RP2-oP-FB4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="675" y="159"/>
         </scene>
         <!--Upload-->
         <scene sceneID="q7k-rh-Pag">
@@ -148,6 +122,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0bC-QC-PHE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2148" y="159"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="eCA-U7-wh5">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T8e-Ki-y5b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="0Uj-I4-QgN" customClass="ViewController" customModule="ImgurApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6IS-Xx-6RC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oMM-4u-Y9b">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="u9Y-fl-cIz">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="u9Y-fl-cIz" id="4dR-W9-QZ9">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8u0-AL-tgW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="oMM-4u-Y9b" firstAttribute="leading" secondItem="8u0-AL-tgW" secondAttribute="leading" id="0EP-3j-w7P"/>
+                            <constraint firstItem="oMM-4u-Y9b" firstAttribute="top" secondItem="8u0-AL-tgW" secondAttribute="top" id="ERd-Fm-WFu"/>
+                            <constraint firstItem="8u0-AL-tgW" firstAttribute="bottom" secondItem="oMM-4u-Y9b" secondAttribute="bottom" id="Um0-qH-0CK"/>
+                            <constraint firstItem="oMM-4u-Y9b" firstAttribute="trailing" secondItem="8u0-AL-tgW" secondAttribute="trailing" id="xJF-Ja-LjN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Home" id="wM6-jD-Sfq"/>
+                    <connections>
+                        <outlet property="tableView" destination="oMM-4u-Y9b" id="ins-Oq-rfQ"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="583" y="169"/>
         </scene>
     </scenes>
     <resources>
