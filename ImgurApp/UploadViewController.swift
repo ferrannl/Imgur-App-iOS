@@ -14,7 +14,6 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
 
         var selectedImage: UIImage!
         var imagePicker = UIImagePickerController()
-        var loadingView = LoadingView()
         var imgurUrl: String = ""
 
         let CLIENT_ID = "0c5ba464f4f237f"
@@ -45,22 +44,11 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
         picker.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func selectImageButtonAction(_ sender: UIButton) {
-            if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
-                imagePicker.delegate = self
-                imagePicker.sourceType = .photoLibrary
-                imagePicker.allowsEditing = false
-                imagePicker.modalPresentationStyle = .fullScreen
-                present(imagePicker, animated: true, completion: nil)
-            }
-        }
-
         @IBAction func uploadImageButtonAction(_ sender: UIButton) {
             uploadImageToImgur(image: imageView.image!)
         }
 
         func uploadImageToImgur(image: UIImage) {
-            loadingView.start()
             getBase64Image(image: image) { base64Image in
                 let boundary = "Boundary-\(UUID().uuidString)"
 
@@ -90,10 +78,7 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
                         return
                     }
                     if let mimeType = response.mimeType, mimeType == "application/json", let data = data, let dataString = String(data: data, encoding: .utf8) {
-                        DispatchQueue.main.async {
-                            self.loadingView.stop()
-                        }
-
+                        
                         print("imgur upload results: \(dataString)")
 
                         let parsedResult: [String: AnyObject]

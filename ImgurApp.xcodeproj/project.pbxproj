@@ -10,7 +10,6 @@
 		1B29EF952607B7DE002D5E4B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29EF942607B7DE002D5E4B /* HomeViewController.swift */; };
 		1B29EF9A2607B8F1002D5E4B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29EF992607B8F1002D5E4B /* SettingsViewController.swift */; };
 		1B29EF9F2607B93C002D5E4B /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29EF9E2607B93C002D5E4B /* UploadViewController.swift */; };
-		1BABA71E2608E36A00CFD34E /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BABA71D2608E36A00CFD34E /* LoadingView.swift */; };
 		1BABA7232608E3CA00CFD34E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BABA7222608E3CA00CFD34E /* DetailViewController.swift */; };
 		1BB207F0260777EC007A6427 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB207EF260777EC007A6427 /* AppDelegate.swift */; };
 		1BB207F2260777ED007A6427 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB207F1260777ED007A6427 /* SceneDelegate.swift */; };
@@ -43,7 +42,6 @@
 		1B29EF942607B7DE002D5E4B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1B29EF992607B8F1002D5E4B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		1B29EF9E2607B93C002D5E4B /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
-		1BABA71D2608E36A00CFD34E /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		1BABA7222608E3CA00CFD34E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		1BB207EC260777EC007A6427 /* ImgurApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImgurApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BB207EF260777EC007A6427 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -119,7 +117,6 @@
 				1B29EF942607B7DE002D5E4B /* HomeViewController.swift */,
 				1B29EF992607B8F1002D5E4B /* SettingsViewController.swift */,
 				1B29EF9E2607B93C002D5E4B /* UploadViewController.swift */,
-				1BABA71D2608E36A00CFD34E /* LoadingView.swift */,
 				1BABA7222608E3CA00CFD34E /* DetailViewController.swift */,
 			);
 			path = ImgurApp;
@@ -278,7 +275,6 @@
 				1BB207F0260777EC007A6427 /* AppDelegate.swift in Sources */,
 				1BB207F2260777ED007A6427 /* SceneDelegate.swift in Sources */,
 				1B29EF9A2607B8F1002D5E4B /* SettingsViewController.swift in Sources */,
-				1BABA71E2608E36A00CFD34E /* LoadingView.swift in Sources */,
 				1B29EF952607B7DE002D5E4B /* HomeViewController.swift in Sources */,
 				1BABA7232608E3CA00CFD34E /* DetailViewController.swift in Sources */,
 			);
