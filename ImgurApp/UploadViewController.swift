@@ -78,7 +78,7 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
                         return
                     }
                     if let mimeType = response.mimeType, mimeType == "application/json", let data = data, let dataString = String(data: data, encoding: .utf8) {
-                        
+                        // code
                         print("imgur upload results: \(dataString)")
                                         
                         let parsedResult: [String: AnyObject]

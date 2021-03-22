@@ -33,7 +33,7 @@
                 <navigationController id="F4r-Du-er7" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="nKQ-mx-35A"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nop-oz-Ze5">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
