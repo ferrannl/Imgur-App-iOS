@@ -87,10 +87,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5OZ-0M-pmW">
-                                <rect key="frame" x="30" y="753" width="49" height="30"/>
-                                <state key="normal" title="Upload"/>
+                                <rect key="frame" x="30" y="753" width="133" height="30"/>
+                                <state key="normal" title="Open Photo Library"/>
                                 <connections>
-                                    <action selector="function" destination="da8-VQ-bvx" eventType="touchUpInside" id="Mwc-n2-JLz"/>
+                                    <action selector="didTapButton" destination="da8-VQ-bvx" eventType="touchUpInside" id="GLk-ve-TRC"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upload a new image below!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lmg-O9-nrC">
@@ -121,6 +121,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Upload" id="ZWv-Qo-pnT"/>
+                    <connections>
+                        <outlet property="imageView" destination="S3e-RV-Gbq" id="DbM-GW-piW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E6V-RR-KWE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -145,7 +148,6 @@
         <!--Home-->
         <scene sceneID="eCA-U7-wh5">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="T8e-Ki-y5b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="0Uj-I4-QgN" customClass="HomeViewController" customModule="ImgurApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6IS-Xx-6RC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -180,6 +182,7 @@
                         <outlet property="tableView" destination="oMM-4u-Y9b" id="ins-Oq-rfQ"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T8e-Ki-y5b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="583" y="169"/>
         </scene>
