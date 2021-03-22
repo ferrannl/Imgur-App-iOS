@@ -17,7 +17,7 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
         var loadingView = LoadingView()
         var imgurUrl: String = ""
 
-        let CLIENT_ID = "MY_CLIENT_ID"
+        let CLIENT_ID = "0c5ba464f4f237f"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,7 +56,7 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
         }
 
         @IBAction func uploadImageButtonAction(_ sender: UIButton) {
-            uploadImageToImgur(image: selectedImage)
+            uploadImageToImgur(image: imageView.image!)
         }
 
         func uploadImageToImgur(image: UIImage) {
