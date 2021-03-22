@@ -50,7 +50,7 @@
                 <navigationController id="kWZ-j5-cdA" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="wGP-sb-dqz"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ezU-xX-NGH">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -67,7 +67,7 @@
                 <navigationController id="7ds-ka-5wm" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="3mL-ls-nhk"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fsU-Xa-npy">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -151,21 +151,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yyF-Vq-eaO">
-                                <rect key="frame" x="0.0" y="44" width="320" height="387"/>
+                                <rect key="frame" x="20" y="64" width="280" height="267"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fD5-7Z-EOQ">
+                                <rect key="frame" x="0.0" y="386" width="320" height="30"/>
+                                <state key="normal" title="Add to list"/>
+                                <connections>
+                                    <action selector="didTapSave" destination="NvL-Tn-Mri" eventType="touchUpInside" id="1CA-ug-EvG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XBc-Gt-riq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="XBc-Gt-riq" firstAttribute="trailing" secondItem="yyF-Vq-eaO" secondAttribute="trailing" id="a3o-dB-2tr"/>
-                            <constraint firstItem="XBc-Gt-riq" firstAttribute="bottom" secondItem="yyF-Vq-eaO" secondAttribute="bottom" id="tG4-a0-DK8"/>
-                            <constraint firstItem="yyF-Vq-eaO" firstAttribute="top" secondItem="XBc-Gt-riq" secondAttribute="top" id="tYF-XI-Ei2"/>
-                            <constraint firstItem="yyF-Vq-eaO" firstAttribute="leading" secondItem="trB-x4-oyw" secondAttribute="leading" id="uNJ-zY-qt4"/>
+                            <constraint firstItem="fD5-7Z-EOQ" firstAttribute="leading" secondItem="XBc-Gt-riq" secondAttribute="leading" id="6ut-QK-dxA"/>
+                            <constraint firstItem="fD5-7Z-EOQ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="XBc-Gt-riq" secondAttribute="top" id="OoM-9H-LMQ"/>
+                            <constraint firstItem="XBc-Gt-riq" firstAttribute="trailing" secondItem="yyF-Vq-eaO" secondAttribute="trailing" constant="20" id="a3o-dB-2tr"/>
+                            <constraint firstItem="XBc-Gt-riq" firstAttribute="bottom" secondItem="fD5-7Z-EOQ" secondAttribute="bottom" constant="15" id="fqh-2E-bTb"/>
+                            <constraint firstItem="XBc-Gt-riq" firstAttribute="bottom" secondItem="yyF-Vq-eaO" secondAttribute="bottom" constant="100" id="tG4-a0-DK8"/>
+                            <constraint firstItem="yyF-Vq-eaO" firstAttribute="top" secondItem="XBc-Gt-riq" secondAttribute="top" constant="20" id="tYF-XI-Ei2"/>
+                            <constraint firstItem="yyF-Vq-eaO" firstAttribute="leading" secondItem="trB-x4-oyw" secondAttribute="leading" constant="20" id="uNJ-zY-qt4"/>
+                            <constraint firstItem="XBc-Gt-riq" firstAttribute="trailing" secondItem="fD5-7Z-EOQ" secondAttribute="trailing" id="zhZ-wO-7tu"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rTt-xf-j12"/>

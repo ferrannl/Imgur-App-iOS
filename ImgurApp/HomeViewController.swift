@@ -9,9 +9,9 @@ import UIKit
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    let images = [
+    var images = [
     "https://i.imgur.com/i7SQKwO.jpeg",
-    "https://i.imgur.com/uHvF70X.jpeg"
+    "https://i.imgur.com/uHvF70X.jpeg",
     ]
     
     @IBOutlet var tableView: UITableView!
@@ -21,6 +21,17 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(didGetNotification(_:)), name: Notification.Name("text"), object: nil)
+        
+    }
+    
+    @objc func didGetNotification(_ notification: Notification){
+        let text = notification.object as! String?
+        print("fGot Noti: \(text)")
+        images.append(text!)
+        tableView.reloadData()
+        
     }
         
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
