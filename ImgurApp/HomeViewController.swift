@@ -33,7 +33,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
     }
     
-    
     @objc func didGetNotification(_ notification: Notification){
         let data = notification.object as! [String?]
         let imgur = Imgurs(usedImgurs: data[0]!, datetime: data[1]!)
