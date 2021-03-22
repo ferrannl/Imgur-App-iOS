@@ -50,7 +50,7 @@
                 <navigationController id="kWZ-j5-cdA" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Settings" selectedImage="gear" catalog="system" id="wGP-sb-dqz"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ezU-xX-NGH">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -67,7 +67,7 @@
                 <navigationController id="7ds-ka-5wm" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Upload" selectedImage="square.and.arrow.up" catalog="system" id="3mL-ls-nhk"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fsU-Xa-npy">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>

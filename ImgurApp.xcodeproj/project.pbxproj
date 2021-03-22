@@ -86,6 +86,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B78DE3626094A28002B39E3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1B78DE2826092280002B39E3 /* Imgurs.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		1B78DE3726094A34002B39E3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1BB207F5260777ED007A6427 /* Main.storyboard */,
+				1BB207FA26077802007A6427 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1B78DE3826094A3C002B39E3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1BB207F3260777ED007A6427 /* ViewController.swift */,
+				1B29EF942607B7DE002D5E4B /* HomeViewController.swift */,
+				1B29EF992607B8F1002D5E4B /* SettingsViewController.swift */,
+				1B29EF9E2607B93C002D5E4B /* UploadViewController.swift */,
+				1BABA7222608E3CA00CFD34E /* DetailViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		1BB207E3260777EC007A6427 = {
 			isa = PBXGroup;
 			children = (
@@ -109,18 +138,13 @@
 		1BB207EE260777EC007A6427 /* ImgurApp */ = {
 			isa = PBXGroup;
 			children = (
+				1B78DE3826094A3C002B39E3 /* Controllers */,
+				1B78DE3726094A34002B39E3 /* Views */,
+				1B78DE3626094A28002B39E3 /* Models */,
 				1BB207EF260777EC007A6427 /* AppDelegate.swift */,
 				1BB207F1260777ED007A6427 /* SceneDelegate.swift */,
-				1BB207F3260777ED007A6427 /* ViewController.swift */,
-				1BB207F5260777ED007A6427 /* Main.storyboard */,
 				1BB207F826077802007A6427 /* Assets.xcassets */,
-				1BB207FA26077802007A6427 /* LaunchScreen.storyboard */,
 				1BB207FD26077802007A6427 /* Info.plist */,
-				1B29EF942607B7DE002D5E4B /* HomeViewController.swift */,
-				1B29EF992607B8F1002D5E4B /* SettingsViewController.swift */,
-				1B29EF9E2607B93C002D5E4B /* UploadViewController.swift */,
-				1BABA7222608E3CA00CFD34E /* DetailViewController.swift */,
-				1B78DE2826092280002B39E3 /* Imgurs.swift */,
 			);
 			path = ImgurApp;
 			sourceTree = "<group>";
