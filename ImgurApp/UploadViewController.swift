@@ -44,9 +44,11 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
         picker.dismiss(animated: true, completion: nil)
     }
     
-        @IBAction func uploadImageButtonAction(_ sender: UIButton) {
+      @IBAction func uploadImageButtonAction(_ sender: UIButton) {
+        if(imageView.image != nil){
             uploadImageToImgur(image: imageView.image!)
         }
+      }
 
         func uploadImageToImgur(image: UIImage) {
             getBase64Image(image: image) { base64Image in

@@ -25,15 +25,15 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NgQ-wm-vxO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1349" y="-1196"/>
+            <point key="canvasLocation" x="1348" y="-1324"/>
         </scene>
-        <!--Item-->
+        <!--List-->
         <scene sceneID="36r-Rq-cqU">
             <objects>
                 <navigationController id="F4r-Du-er7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="nKQ-mx-35A"/>
+                    <tabBarItem key="tabBarItem" title="List" selectedImage="list.dash" catalog="system" id="nKQ-mx-35A"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nop-oz-Ze5">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -44,13 +44,13 @@
             </objects>
             <point key="canvasLocation" x="583" y="-514"/>
         </scene>
-        <!--Item-->
+        <!--Settings-->
         <scene sceneID="qFc-gJ-g8D">
             <objects>
                 <navigationController id="kWZ-j5-cdA" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="wGP-sb-dqz"/>
+                    <tabBarItem key="tabBarItem" title="Settings" selectedImage="gear" catalog="system" id="wGP-sb-dqz"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ezU-xX-NGH">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -61,13 +61,13 @@
             </objects>
             <point key="canvasLocation" x="1977" y="-514"/>
         </scene>
-        <!--Item-->
+        <!--Upload-->
         <scene sceneID="eyz-TS-I0N">
             <objects>
                 <navigationController id="7ds-ka-5wm" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="3mL-ls-nhk"/>
+                    <tabBarItem key="tabBarItem" title="Upload" selectedImage="square.and.arrow.up" catalog="system" id="3mL-ls-nhk"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fsU-Xa-npy">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -140,7 +140,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E6V-RR-KWE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1428.985507246377" y="158.70535714285714"/>
+            <point key="canvasLocation" x="1286" y="265"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="9qL-MP-l34">
@@ -186,7 +186,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7UD-pa-jzA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1564" y="921"/>
+            <point key="canvasLocation" x="1286" y="1048"/>
         </scene>
         <!--Settings-->
         <scene sceneID="UVi-kP-ilz">
@@ -202,7 +202,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0bC-QC-PHE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2148" y="159"/>
+            <point key="canvasLocation" x="1976" y="266"/>
         </scene>
         <!--Home-->
         <scene sceneID="eCA-U7-wh5">
@@ -243,10 +243,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T8e-Ki-y5b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="583" y="169"/>
+            <point key="canvasLocation" x="581" y="265"/>
         </scene>
     </scenes>
     <resources>
+        <image name="gear" catalog="system" width="128" height="119"/>
+        <image name="list.dash" catalog="system" width="128" height="85"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

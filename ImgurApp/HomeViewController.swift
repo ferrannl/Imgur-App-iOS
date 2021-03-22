@@ -53,7 +53,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
         
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("You tapped me!")
+        let urlString = self.images[indexPath.row].usedImgurs
+        if let url = URL(string: urlString){
+            UIApplication.shared.open(url)
+        }
     }
     
 
