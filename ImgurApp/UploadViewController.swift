@@ -15,6 +15,7 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
         var selectedImage: UIImage!
         var imagePicker = UIImagePickerController()
         var imgurUrl: String = ""
+        var imgurDate: String = ""
 
         let CLIENT_ID = "0c5ba464f4f237f"
     
@@ -80,7 +81,6 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
                         return
                     }
                     if let mimeType = response.mimeType, mimeType == "application/json", let data = data, let dataString = String(data: data, encoding: .utf8) {
-                        // code
                         print("imgur upload results: \(dataString)")
                                         
                         let parsedResult: [String: AnyObject]
@@ -88,7 +88,10 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
                             parsedResult = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [String: AnyObject]
                             if let dataJson = parsedResult["data"] as? [String: Any] {
                                 print("Link is : \(dataJson["link"] as? String ?? "Link not found")")
+                                print("Date is : \(dataJson["datetime"] ?? "Date not found")")
                                 self.imgurUrl = dataJson["link"] as? String ?? ""
+                                self.imgurDate = "\(dataJson["datetime"] ?? "0")"
+                                print(self.imgurDate)
                                 DispatchQueue.main.async {
                                     self.performSegue(withIdentifier: "detailsseg", sender: self)
                                 }
@@ -114,6 +117,8 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
             if segue.identifier == "detailsseg" {
                 let destViewController = segue.destination as? DetailViewController
                 destViewController?.imgurUrl = imgurUrl
+                destViewController?.imgurDate = imgurDate
+
             }
         }
     

@@ -26,16 +26,17 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             do {
                 images = try jsonDecoder.decode([Imgurs].self, from: savedImages)
             } catch{
-                print("Failed to load words")
+                print("No images or failed to load images")
             }
         }
         NotificationCenter.default.addObserver(self, selector: #selector(didGetNotification(_:)), name: Notification.Name("text"), object: nil)
         
     }
     
+    
     @objc func didGetNotification(_ notification: Notification){
-        let text = notification.object as! String?
-        let imgur = Imgurs(usedImgurs: text!)
+        let data = notification.object as! [String?]
+        let imgur = Imgurs(usedImgurs: data[0]!, datetime: data[1]!)
         images.append(imgur)
         self.save()
         tableView.reloadData()
