@@ -83,10 +83,18 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.myTypeLabel.text = realString
         
         //date for cell
-        tempText = images[indexPath.row].imgurDate
-        cell.myDateLabel.text = tempText
+        let tempEpochTime = Int(images[indexPath.row].imgurDate) ?? 0
+        print(tempEpochTime)
+        let EpochTime = TimeInterval(tempEpochTime)
+        print(EpochTime)
+        let date = Date(timeIntervalSince1970: EpochTime)
+        print(date)
+        cell.myDateLabel.text = date
     return cell
     }
+           
+    extension Date {
         
-
+    }
+    
 }
