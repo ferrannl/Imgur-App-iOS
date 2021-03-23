@@ -93,12 +93,9 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
                                 // date of upload or day of today
                                 let newImgurDate = dataJson["datetime"]!
                                 let tempImgurDate = "\(newImgurDate)"
-
                                 let EpochTime = TimeInterval(tempImgurDate)
                                 let date = Date(timeIntervalSince1970: EpochTime!)
-                                print(date)
                                 self.imgurDate = self.fixDate(Date: date)
-                                print(self.imgurDate)
                                 DispatchQueue.main.async {
                                     self.performSegue(withIdentifier: "detailsseg", sender: self)
                                 }

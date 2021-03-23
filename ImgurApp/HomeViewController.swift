@@ -32,7 +32,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             do {
                 images = try jsonDecoder.decode([Imgurs].self, from: savedImages)
             } catch{
-                print("No images or failed to load images")
+                //print("No images or failed to load images")
             }
         }
         NotificationCenter.default.addObserver(self, selector: #selector(didGetNotification(_:)), name: Notification.Name("text"), object: nil)
