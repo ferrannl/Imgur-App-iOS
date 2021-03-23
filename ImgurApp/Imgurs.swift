@@ -9,10 +9,12 @@ import Foundation
 
 class Imgurs: NSObject, Codable{
     var usedImgurs: String
-    var datetime: String
+    var imgurDate: String
+    var imgurType: String
     
-    init(usedImgurs: String, datetime: String){
+    init(usedImgurs: String, imgurType: String, imgurDate: String){
         self.usedImgurs = usedImgurs
-        self.datetime = datetime
+        self.imgurType = imgurType
+        self.imgurDate = imgurDate
     }
 }

@@ -17,9 +17,13 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        // set custom cell for table view
+        let nib = UINib(nibName: "ImgurTableViewCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "ImgurTableViewCell")
         tableView.delegate = self
         tableView.dataSource = self
+        
+        // decode objects in localstorage
         let defaults = UserDefaults.standard
         if let savedImages = defaults.object(forKey: "images") as? Data{
             let jsonDecoder = JSONDecoder()
@@ -35,7 +39,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @objc func didGetNotification(_ notification: Notification){
         let data = notification.object as! [String?]
-        let imgur = Imgurs(usedImgurs: data[0]!, datetime: data[1]!)
+        let imgur = Imgurs(usedImgurs: data[0]!, imgurType: data[1]!, imgurDate: data[2]!)
         images.append(imgur)
         self.save()
         tableView.reloadData()
@@ -65,10 +69,22 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ImgurTableViewCell", for: indexPath) as! ImgurTableViewCell
         
-        cell.textLabel?.text = images[indexPath.row].usedImgurs
+        //url for cell
+        var tempText = images[indexPath.row].usedImgurs
+        let urlString = (tempText as NSString).deletingPathExtension
+        cell.myLabel.text = urlString
         
+        //type of cell
+        tempText = images[indexPath.row].imgurType
+        let substring = tempText.dropFirst(6)
+        let realString = String(substring)
+        cell.myTypeLabel.text = realString
+        
+        //date for cell
+        tempText = images[indexPath.row].imgurDate
+        cell.myDateLabel.text = tempText
     return cell
     }
         

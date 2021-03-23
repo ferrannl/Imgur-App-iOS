@@ -16,7 +16,7 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
         var imagePicker = UIImagePickerController()
         var imgurUrl: String = ""
         var imgurDate: String = ""
-
+        var imgurType: String = ""
         let CLIENT_ID = "0c5ba464f4f237f"
     
     override func viewDidLoad() {
@@ -89,9 +89,11 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
                             if let dataJson = parsedResult["data"] as? [String: Any] {
                                 print("Link is : \(dataJson["link"] as? String ?? "Link not found")")
                                 print("Date is : \(dataJson["datetime"] ?? "Date not found")")
+                                print("Type is : \(dataJson["type"] as? String ?? "Type not found")")
                                 self.imgurUrl = dataJson["link"] as? String ?? ""
                                 self.imgurDate = "\(dataJson["datetime"] ?? "0")"
-                                print(self.imgurDate)
+                                self.imgurType = dataJson["type"] as? String ?? ""
+                                
                                 DispatchQueue.main.async {
                                     self.performSegue(withIdentifier: "detailsseg", sender: self)
                                 }
@@ -117,6 +119,7 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
             if segue.identifier == "detailsseg" {
                 let destViewController = segue.destination as? DetailViewController
                 destViewController?.imgurUrl = imgurUrl
+                destViewController?.imgurType = imgurType
                 destViewController?.imgurDate = imgurDate
 
             }
