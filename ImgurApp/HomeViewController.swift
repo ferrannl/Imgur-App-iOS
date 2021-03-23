@@ -82,6 +82,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                 print(date)
                         cell.myDateLabel.text = fixDate(Date: date)
             } else{
+                print(tempEpochTime)
             cell.myDateLabel.text = fixDate(Date: Date())
             }
         } else{
