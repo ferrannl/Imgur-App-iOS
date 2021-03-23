@@ -92,8 +92,9 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
                                 self.imgurUrl = dataJson["link"] as? String ?? ""
                                 // date of upload or day of today
                                 let timeInterval = NSDate().timeIntervalSince1970
-                                self.imgurDate = "\(dataJson["datetime"] ?? timeInterval)"
-                                
+                                let tempImgurDate = "\(dataJson["datetime"] ?? timeInterval)"
+                                self.imgurDate = tempImgurDate
+                                                                
                                 DispatchQueue.main.async {
                                     self.performSegue(withIdentifier: "detailsseg", sender: self)
                                 }

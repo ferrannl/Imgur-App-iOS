@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fP8-lG-9BS">
-    <device id="retina3_5" orientation="portrait" appearance="light"/>
+    <device id="retina3_5" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -25,13 +25,13 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NgQ-wm-vxO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1348" y="-1324"/>
+            <point key="canvasLocation" x="1284" y="-1375"/>
         </scene>
         <!--List-->
         <scene sceneID="36r-Rq-cqU">
             <objects>
                 <navigationController id="F4r-Du-er7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="List" selectedImage="list.dash" catalog="system" id="nKQ-mx-35A"/>
+                    <tabBarItem key="tabBarItem" title="List" image="list.dash" catalog="system" selectedImage="list.dash" id="nKQ-mx-35A"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nop-oz-Ze5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -48,7 +48,7 @@
         <scene sceneID="qFc-gJ-g8D">
             <objects>
                 <navigationController id="kWZ-j5-cdA" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" selectedImage="gear" catalog="system" id="wGP-sb-dqz"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="gear" catalog="system" selectedImage="gear" id="wGP-sb-dqz"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ezU-xX-NGH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -65,7 +65,7 @@
         <scene sceneID="eyz-TS-I0N">
             <objects>
                 <navigationController id="7ds-ka-5wm" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Upload" selectedImage="square.and.arrow.up" catalog="system" id="3mL-ls-nhk"/>
+                    <tabBarItem key="tabBarItem" title="Upload" image="square.and.arrow.up" catalog="system" selectedImage="square.and.arrow.up" id="3mL-ls-nhk"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fsU-Xa-npy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
