@@ -197,7 +197,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="oMM-4u-Y9b" firstAttribute="top" secondItem="8u0-AL-tgW" secondAttribute="top" id="1cS-x6-y7h"/>
-                            <constraint firstItem="oMM-4u-Y9b" firstAttribute="bottom" secondItem="8u0-AL-tgW" secondAttribute="bottom" id="QoC-yb-n3j"/>
+                            <constraint firstItem="oMM-4u-Y9b" firstAttribute="bottom" secondItem="8u0-AL-tgW" secondAttribute="bottom" priority="999" id="QoC-yb-n3j"/>
                             <constraint firstItem="oMM-4u-Y9b" firstAttribute="leading" secondItem="8u0-AL-tgW" secondAttribute="leading" id="rMx-cW-asg"/>
                             <constraint firstItem="oMM-4u-Y9b" firstAttribute="trailing" secondItem="8u0-AL-tgW" secondAttribute="trailing" id="vca-h1-ALO"/>
                         </constraints>
