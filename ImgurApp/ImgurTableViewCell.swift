@@ -10,7 +10,6 @@ import UIKit
 class ImgurTableViewCell: UITableViewCell {
 
     @IBOutlet var myLabel: UILabel!
-    @IBOutlet var myTypeLabel: UILabel!
     @IBOutlet var myDateLabel: UILabel!
     
     override func awakeFromNib() {

@@ -17,13 +17,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h0l-US-xhA">
-                        <rect key="frame" x="10" y="0.0" width="310" height="44"/>
+                        <rect key="frame" x="10" y="10" width="310" height="24"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DateLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ve9-fT-euF">
-                        <rect key="frame" x="248.5" y="0.0" width="61.5" height="44"/>
+                        <rect key="frame" x="248.5" y="0.0" width="61.5" height="34"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -35,11 +35,11 @@
                 <constraint firstItem="h0l-US-xhA" firstAttribute="leading" secondItem="njF-e1-oar" secondAttribute="leading" constant="10" id="EgF-vr-LnM"/>
                 <constraint firstItem="njF-e1-oar" firstAttribute="trailing" secondItem="h0l-US-xhA" secondAttribute="trailing" id="WVJ-Lk-FcG"/>
                 <constraint firstItem="Ve9-fT-euF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="njF-e1-oar" secondAttribute="leading" id="Waz-ey-z1r"/>
-                <constraint firstItem="h0l-US-xhA" firstAttribute="top" secondItem="njF-e1-oar" secondAttribute="top" id="c27-7i-wTz"/>
-                <constraint firstItem="njF-e1-oar" firstAttribute="bottom" secondItem="h0l-US-xhA" secondAttribute="bottom" id="dgc-Dc-G12"/>
+                <constraint firstItem="h0l-US-xhA" firstAttribute="top" secondItem="njF-e1-oar" secondAttribute="top" constant="10" id="c27-7i-wTz"/>
+                <constraint firstItem="njF-e1-oar" firstAttribute="bottom" secondItem="h0l-US-xhA" secondAttribute="bottom" constant="10" id="dgc-Dc-G12"/>
                 <constraint firstItem="njF-e1-oar" firstAttribute="trailing" secondItem="Ve9-fT-euF" secondAttribute="trailing" constant="10" id="gXd-7q-xW2"/>
                 <constraint firstItem="Ve9-fT-euF" firstAttribute="top" secondItem="njF-e1-oar" secondAttribute="top" id="wTd-xd-qKS"/>
-                <constraint firstItem="njF-e1-oar" firstAttribute="bottom" secondItem="Ve9-fT-euF" secondAttribute="bottom" id="xMq-3H-HAJ"/>
+                <constraint firstItem="njF-e1-oar" firstAttribute="bottom" secondItem="Ve9-fT-euF" secondAttribute="bottom" constant="10" id="xMq-3H-HAJ"/>
             </constraints>
             <connections>
                 <outlet property="myDateLabel" destination="Ve9-fT-euF" id="kEx-5T-xpK"/>

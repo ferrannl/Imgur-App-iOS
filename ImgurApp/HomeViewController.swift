@@ -39,11 +39,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @objc func didGetNotification(_ notification: Notification){
         let data = notification.object as! [String?]
-        let imgur = Imgurs(usedImgurs: data[0]!, imgurType: data[1]!, imgurDate: data[2]!)
+        let imgur = Imgurs(usedImgurs: data[0]!, imgurDate: data[1]!)
         images.append(imgur)
         self.save()
         tableView.reloadData()
-        
     }
     
     func save(){
@@ -71,23 +70,14 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         let cell = tableView.dequeueReusableCell(withIdentifier: "ImgurTableViewCell", for: indexPath) as! ImgurTableViewCell
         
         //url for cell
-        var tempText = images[indexPath.row].usedImgurs
+        let tempText = images[indexPath.row].usedImgurs
         let urlString = (tempText as NSString).deletingPathExtension
         cell.myLabel.text = urlString
         
-        //type of cell
-        tempText = images[indexPath.row].imgurType
-        let substring = tempText.dropFirst(6)
-        let realString = String(substring)
-        cell.myTypeLabel.text = realString
-        
         //date for cell
         let tempEpochTime = Int(images[indexPath.row].imgurDate) ?? 0
-        print(tempEpochTime)
         let EpochTime = TimeInterval(tempEpochTime)
-        print(EpochTime)
         let date = Date(timeIntervalSince1970: EpochTime)
-        print(date)
         cell.myDateLabel.text = fixDate(Date: date)
     return cell
     }
@@ -100,7 +90,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         let monthString = dateFormatter.string(from: Date)
         dateFormatter.dateFormat = "dd"
         let dayString = dateFormatter.string(from: Date)
-        let newDate = dayString + " - " + monthString + " - " + yearString
+        let newDate = dayString + "-" + monthString + "-" + yearString
         return newDate
     }
     
