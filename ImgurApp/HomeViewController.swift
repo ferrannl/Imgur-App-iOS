@@ -43,7 +43,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         let imgur = Imgurs(usedImgurs: data[0]!, imgurDate: data[1]!)
         images.append(imgur)
         self.save()
-        print(" test" )
         tableView.reloadData()
     }
     
