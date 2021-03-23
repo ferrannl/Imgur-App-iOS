@@ -20,6 +20,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         // set custom cell for table view
         let nib = UINib(nibName: "ImgurTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "ImgurTableViewCell")
+        tableView.rowHeight = 44
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -69,16 +70,18 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ImgurTableViewCell", for: indexPath) as! ImgurTableViewCell
         
-        //url for cell
-        let tempText = images[indexPath.row].usedImgurs
-        let urlString = (tempText as NSString).deletingPathExtension
-        cell.myLabel.text = urlString
-        
         //date for cell
         let tempEpochTime = Int(images[indexPath.row].imgurDate) ?? 0
         let EpochTime = TimeInterval(tempEpochTime)
         let date = Date(timeIntervalSince1970: EpochTime)
         cell.myDateLabel.text = fixDate(Date: date)
+        
+        //url for cell
+        let tempText = images[indexPath.row].usedImgurs
+        let urlString = (tempText as NSString).deletingPathExtension
+        cell.myLabel.text = urlString
+        
+
     return cell
     }
         

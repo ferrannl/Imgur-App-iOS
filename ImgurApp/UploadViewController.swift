@@ -79,15 +79,20 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
                         print("server error")
                         return
                     }
-                    if let mimeType = response.mimeType, mimeType == "application/json", let data = data, let dataString = String(data: data, encoding: .utf8) {
-                        print("imgur upload results: \(dataString)")
+                    if let mimeType = response.mimeType, mimeType == "application/json", let data = data {
+                        
+                        // print JsonData
+                        // , let dataString = String(data: data, encoding: .utf8)
+                        // print("imgur upload results: \(dataString)")
                                         
                         let parsedResult: [String: AnyObject]
                         do {
                             parsedResult = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [String: AnyObject]
                             if let dataJson = parsedResult["data"] as? [String: Any] {
                                 self.imgurUrl = dataJson["link"] as? String ?? ""
-                                self.imgurDate = "\(dataJson["datetime"] ?? "0")"
+                                // date of upload or day of today
+                                let timeInterval = NSDate().timeIntervalSince1970
+                                self.imgurDate = "\(dataJson["datetime"] ?? timeInterval)"
                                 
                                 DispatchQueue.main.async {
                                     self.performSegue(withIdentifier: "detailsseg", sender: self)
