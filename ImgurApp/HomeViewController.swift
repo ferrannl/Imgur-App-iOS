@@ -81,22 +81,17 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                 let date = Date(timeIntervalSince1970: EpochTime!)
                 print(date)
                         cell.myDateLabel.text = fixDate(Date: date)
-            } else{
-                print(tempEpochTime)
-            cell.myDateLabel.text = fixDate(Date: Date())
             }
-        } else{
-            cell.myDateLabel.text = fixDate(Date: Date())
+           else {
+            cell.myDateLabel.text = tempEpochTime
+            }
 
-        }
-        
         //url for cell
         let tempText = images[indexPath.row].usedImgurs
         let urlString = (tempText as NSString).deletingPathExtension
         cell.myLabel.text = urlString
-        
-
-    return cell
+        }
+        return cell
     }
     
     func fixDate(Date: Date) -> String{
