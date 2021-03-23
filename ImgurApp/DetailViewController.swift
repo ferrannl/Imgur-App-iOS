@@ -12,7 +12,6 @@ class DetailViewController: UIViewController {
         
     var imgurUrl: String = ""
     var imgurDate: String = ""
-    var imgurType: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +19,7 @@ class DetailViewController: UIViewController {
     }
     
     @IBAction func didTapSave(){
-        NotificationCenter.default.post(name: Notification.Name("text"), object: [imgurUrl, imgurType, imgurDate])
+        NotificationCenter.default.post(name: Notification.Name("text"), object: [imgurUrl, imgurDate])
 
         dismiss(animated: true, completion: nil)
     }
