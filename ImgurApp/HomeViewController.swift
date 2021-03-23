@@ -62,7 +62,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             UIApplication.shared.open(url)
         }
     }
-    
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return images.count
@@ -89,12 +88,20 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         print(EpochTime)
         let date = Date(timeIntervalSince1970: EpochTime)
         print(date)
-        cell.myDateLabel.text = date
+        cell.myDateLabel.text = fixDate(Date: date)
     return cell
     }
-           
-    extension Date {
         
+    func fixDate(Date: Date) -> String{
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy"
+        let yearString = dateFormatter.string(from: Date)
+        dateFormatter.dateFormat = "MM"
+        let monthString = dateFormatter.string(from: Date)
+        dateFormatter.dateFormat = "dd"
+        let dayString = dateFormatter.string(from: Date)
+        let newDate = dayString + " - " + monthString + " - " + yearString
+        return newDate
     }
     
 }

@@ -99,7 +99,7 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
                                 }
                             }
                         } catch {
-                            // Display an error
+                            print("Error dispatching or uploading.")
                         }
                     }
                 }.resume()
