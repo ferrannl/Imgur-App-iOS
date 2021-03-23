@@ -17,6 +17,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        UserDefaults.standard.removeObject(forKey: "is_app_launched")
         // set custom cell for table view
         let nib = UINib(nibName: "ImgurTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "ImgurTableViewCell")
@@ -55,6 +56,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             print("Failed to save image data")
         }
     }
+    
+
         
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let urlString = self.images[indexPath.row].usedImgurs
@@ -71,10 +74,20 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         let cell = tableView.dequeueReusableCell(withIdentifier: "ImgurTableViewCell", for: indexPath) as! ImgurTableViewCell
         
         //date for cell
-        let tempEpochTime = Int(images[indexPath.row].imgurDate) ?? 0
-        let EpochTime = TimeInterval(tempEpochTime)
-        let date = Date(timeIntervalSince1970: EpochTime)
-        cell.myDateLabel.text = fixDate(Date: date)
+        let tempEpochTime = String(images[indexPath.row].imgurDate)
+        if(tempEpochTime != ""){
+            let EpochTime = TimeInterval(tempEpochTime)
+            if(EpochTime != nil){
+                let date = Date(timeIntervalSince1970: EpochTime!)
+                print(date)
+                        cell.myDateLabel.text = fixDate(Date: date)
+            } else{
+            cell.myDateLabel.text = fixDate(Date: Date())
+            }
+        } else{
+            cell.myDateLabel.text = fixDate(Date: Date())
+
+        }
         
         //url for cell
         let tempText = images[indexPath.row].usedImgurs
@@ -84,7 +97,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     return cell
     }
-        
+    
     func fixDate(Date: Date) -> String{
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy"
@@ -93,8 +106,12 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         let monthString = dateFormatter.string(from: Date)
         dateFormatter.dateFormat = "dd"
         let dayString = dateFormatter.string(from: Date)
-        let newDate = dayString + "-" + monthString + "-" + yearString
+        dateFormatter.dateFormat = "HH"
+        let hourString = dateFormatter.string(from: Date)
+        dateFormatter.dateFormat = "mm"
+        let minuteString = dateFormatter.string(from: Date)
+        
+        let newDate = dayString + "-" + monthString + "-" + yearString + "- " + hourString + ":" + minuteString
         return newDate
     }
-    
 }

@@ -91,10 +91,14 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
                             if let dataJson = parsedResult["data"] as? [String: Any] {
                                 self.imgurUrl = dataJson["link"] as? String ?? ""
                                 // date of upload or day of today
-                                let timeInterval = NSDate().timeIntervalSince1970
-                                let tempImgurDate = "\(dataJson["datetime"] ?? timeInterval)"
-                                self.imgurDate = tempImgurDate
-                                                                
+                                let newImgurDate = dataJson["datetime"]!
+                                let tempImgurDate = "\(newImgurDate)"
+
+                                let EpochTime = TimeInterval(tempImgurDate)
+                                let date = Date(timeIntervalSince1970: EpochTime!)
+                                print(date)
+                                self.imgurDate = self.fixDate(Date: date)
+                                print(self.imgurDate)
                                 DispatchQueue.main.async {
                                     self.performSegue(withIdentifier: "detailsseg", sender: self)
                                 }
@@ -107,7 +111,23 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
             }
         }
         
-
+    func fixDate(Date: Date) -> String{
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy"
+        let yearString = dateFormatter.string(from: Date)
+        dateFormatter.dateFormat = "MM"
+        let monthString = dateFormatter.string(from: Date)
+        dateFormatter.dateFormat = "dd"
+        let dayString = dateFormatter.string(from: Date)
+        dateFormatter.dateFormat = "HH"
+        let hourString = dateFormatter.string(from: Date)
+        dateFormatter.dateFormat = "mm"
+        let minuteString = dateFormatter.string(from: Date)
+        
+        let newDate = dayString + "-" + monthString + "-" + yearString + " " + hourString + ":" + minuteString
+        return newDate
+    }
+    
         func getBase64Image(image: UIImage, complete: @escaping (String?) -> ()) {
             DispatchQueue.main.async {
                 let imageData = image.pngData()
