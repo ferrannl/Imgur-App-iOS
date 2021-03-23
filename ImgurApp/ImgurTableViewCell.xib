@@ -36,10 +36,10 @@
                 <constraint firstItem="njF-e1-oar" firstAttribute="trailing" secondItem="h0l-US-xhA" secondAttribute="trailing" id="WVJ-Lk-FcG"/>
                 <constraint firstItem="Ve9-fT-euF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="njF-e1-oar" secondAttribute="leading" id="Waz-ey-z1r"/>
                 <constraint firstItem="h0l-US-xhA" firstAttribute="top" secondItem="njF-e1-oar" secondAttribute="top" constant="10" id="c27-7i-wTz"/>
-                <constraint firstItem="njF-e1-oar" firstAttribute="bottom" secondItem="h0l-US-xhA" secondAttribute="bottom" constant="10" id="dgc-Dc-G12"/>
+                <constraint firstItem="njF-e1-oar" firstAttribute="bottom" secondItem="h0l-US-xhA" secondAttribute="bottom" priority="999" constant="10" id="dgc-Dc-G12"/>
                 <constraint firstItem="njF-e1-oar" firstAttribute="trailing" secondItem="Ve9-fT-euF" secondAttribute="trailing" constant="10" id="gXd-7q-xW2"/>
                 <constraint firstItem="Ve9-fT-euF" firstAttribute="top" secondItem="njF-e1-oar" secondAttribute="top" constant="10" id="wTd-xd-qKS"/>
-                <constraint firstItem="njF-e1-oar" firstAttribute="bottom" secondItem="Ve9-fT-euF" secondAttribute="bottom" constant="10" id="xMq-3H-HAJ"/>
+                <constraint firstItem="njF-e1-oar" firstAttribute="bottom" secondItem="Ve9-fT-euF" secondAttribute="bottom" priority="999" constant="10" id="xMq-3H-HAJ"/>
             </constraints>
             <connections>
                 <outlet property="myDateLabel" destination="Ve9-fT-euF" id="kEx-5T-xpK"/>
