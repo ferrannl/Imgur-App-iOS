@@ -43,6 +43,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         let imgur = Imgurs(usedImgurs: data[0]!, imgurDate: data[1]!)
         images.append(imgur)
         self.save()
+        print(" test" )
         tableView.reloadData()
     }
     
@@ -56,8 +57,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
-
-        
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let urlString = self.images[indexPath.row].usedImgurs
         if let url = URL(string: urlString){
