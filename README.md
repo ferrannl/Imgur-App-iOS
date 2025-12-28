@@ -1,3 +1,5 @@
+![iosimgurappGgameplay](logo.gif)
+
 # Imgur App – iOS
 
 Simple native **Imgur client for iOS**, written in Swift.  
